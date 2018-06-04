@@ -36,8 +36,6 @@ export class SqlitePage {
   }
 
   //création de ma table de données
-
-
   private createTables(): void{
     this.db.executeSql("CREATE TABLE IF NOT EXISTS `oeuvres` ( `id` INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE, `firstname` INTEGER, `lastname` INTEGER, `code` NUMERIC, `url` TEXT, `check` INTEGER DEFAULT 0 CHECK(1) )", {})
     .then(() => {

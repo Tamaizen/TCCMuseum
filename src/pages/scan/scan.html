@@ -1,19 +1,21 @@
 <ion-header>
-
   <ion-navbar>
-    <button ion-button menu-toggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Scanner Barcode</ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
+    <button ion-button menu-toggle>
+
+      <ion-icon name="menu"></ion-icon>
+
+    </button>
+
+    <ion-title>Scanner Barcode</ion-title>
+
+  </ion-navbar>
+
+  </ion-header>
   <ion-card *ngIf="result">
     <ion-card-content>
-      <p>code barre : {{result.text}}</p>
-      <p>format: {{result.format}}</p>
+      <P>code barre : {{result.text}}</P>
+      <P>format : {{result.format}}</P>
     </ion-card-content>
-  </ion-card>
 
-</ion-content>
+  </ion-card>

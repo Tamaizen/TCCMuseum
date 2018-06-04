@@ -11,13 +11,27 @@
     <ion-title>TCC_Museum</ion-title>
   </ion-navbar>
 </ion-header>
-<!-- ici mon main content -->
-<ion-content class="maingrid">
-  <ion-content class="">
-  </ion-content>
-</ion-content>
 
-<ion-footer class="footer">
-  <ion-content>
+<!-- ici mon main content -->
+<ion-content padding>
+    <h2><b>Oeuvres vues :</b> {{seenWorks}} / {{totalWorks}}</h2>
+
+    <ion-scroll scrollY="true" style="height:100%">
+      <p *ngFor="let workInfo of worksInfo">
+
+          <ion-card >
+            <img src="../../assets/imgs/{{workInfo.photo_path}}"/>
+            <ion-card-content>
+              <b>Nom : </b>{{workInfo.lastname}}<br/>
+              <b>Prénom : </b>{{workInfo.firstname}}<br/>
+              <b>Code : </b>{{workInfo.qr_code_number}}<br/>
+              <p *ngIf="workInfo.visit_status == 1">
+                <!-- <ion-checkbox checked="true" disabled="true"></ion-checkbox> -->
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+              </p>
+            </ion-card-content>
+          </ion-card>
+      </p>
+    </ion-scroll>
+
   </ion-content>
-</ion-footer>
